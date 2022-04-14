@@ -1,0 +1,33 @@
+@import "../../styles/index";
+
+.medium-card {
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &-img {
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+
+    img {
+      border-radius: 0.75rem;
+    }
+  }
+
+  &-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 0.75rem;
+
+    @include lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+}

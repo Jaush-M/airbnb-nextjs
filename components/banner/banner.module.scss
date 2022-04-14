@@ -1,0 +1,63 @@
+@import "../../styles/colors";
+@import "../../styles/breakpoints";
+@import "../../styles/utilities";
+
+.banner {
+  position: relative;
+  height: 18.75rem;
+
+  @include sm {
+    height: 25rem;
+  }
+  @include md {
+    height: 31.25rem;
+  }
+  @include lg {
+    height: 37.5rem;
+  }
+  @include xl {
+    height: 43.75rem;
+  }
+  @include xl-2 {
+    height: 50rem;
+  }
+
+  &-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+
+    p {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+
+      @include sm {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+    }
+
+    button {
+      color: #8b5cf6;
+      background-color: $white;
+      padding: 1rem 2.5rem;
+      margin: 0.75rem 0;
+      font-weight: bold;
+      border-radius: 99px;
+      box-shadow: util(shadow, md);
+      transition-property: background-color, border-color, color, fill, stroke,
+        opacity, box-shadow, transform;
+      transition-duration: 150ms;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: util(shadow, xl);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
