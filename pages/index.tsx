@@ -64,11 +64,11 @@ const Home: NextPage<HomeProps> = ({ locationData, cardsData }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const locationData: GetLocationData = await fetch(
-    "http://localhost:3000/api/locations"
+    "https://airbnb-r5z6o2emq-jaush-m.vercel.app/api/locations"
   ).then((res) => res.json());
 
   const cardsData: GetCardsData = await fetch(
-    "http://localhost:3000/api/cards"
+    "https://airbnb-r5z6o2emq-jaush-m.vercel.app/api/cards"
   ).then((res) => res.json());
 
   return {
