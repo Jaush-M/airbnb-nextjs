@@ -14,7 +14,7 @@ const Banner: React.FC<BannerProps> = () => {
 
       <div className={`${styles["banner-content"]}`}>
         <p>Not sure where to go? Perfect.</p>
-        <button>I'm flexible</button>
+        <button>I&apos;m flexible</button>
       </div>
     </div>
   );
