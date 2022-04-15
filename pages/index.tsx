@@ -63,6 +63,7 @@ const Home: NextPage<HomeProps> = ({ locationData, cardsData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  console.log(`${process.env.NEXT_PUBLIC_URL}/api/locations`);
   const locationData: GetLocationData[] = await fetch(
     `${process.env.NEXT_PUBLIC_URL}/api/locations`
   ).then((res) => res.json());
