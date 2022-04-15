@@ -44,8 +44,6 @@ const data = [
   },
 ];
 
-export const dataLocation = data;
-
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<GetLocationData[]>

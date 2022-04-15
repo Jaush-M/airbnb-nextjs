@@ -10,8 +10,6 @@ import Section from "../components/section/section";
 import MediumCard from "../components/mediumCard/mediumCard";
 import LargeCard from "../components/largeCard/largeCard";
 import Footer from "../components/layout/footer/footer";
-import { dataLocation } from "./api/locations";
-import { dataCard } from "./api/cards";
 
 interface HomeProps {
   locationData: GetLocationData[];
@@ -65,16 +63,13 @@ const Home: NextPage<HomeProps> = ({ locationData, cardsData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const locationData: GetLocationData[] = await fetch(
-  //   "https://airbnb-lovat.vercel.app/api/locations"
-  // ).then((res) => res.json());
+  const locationData: GetLocationData[] = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/locations`
+  ).then((res) => res.json());
 
-  // const cardsData: GetCardsData[] = await fetch(
-  //   "https://airbnb-lovat.vercel.app/api/cards"
-  // ).then((res) => res.json());
-
-  const locationData: GetLocationData[] = dataLocation;
-  const cardsData: GetCardsData[] = dataCard;
+  const cardsData: GetCardsData[] = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/cards`
+  ).then((res) => res.json());
 
   return {
     props: {

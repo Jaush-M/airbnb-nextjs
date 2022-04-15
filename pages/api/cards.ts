@@ -20,8 +20,6 @@ const data = [
   },
 ];
 
-export const dataCard = data;
-
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<GetCardsData[]>
